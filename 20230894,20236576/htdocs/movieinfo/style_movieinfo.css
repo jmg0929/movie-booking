@@ -1,0 +1,110 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styles */
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
+    padding: 40px;
+    margin: 20px;
+    border: 1px solid #ccc; /* 태두리 추가 */
+    border-radius: 8px; /* 태두리 둥글게 처리 */
+    text-align: left;
+    position: relative; /* 위치 설정 */
+}
+
+/* Header Styles */
+.movie-info-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin: 0;
+}
+
+/* Movie Info Styles */
+.movie-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.movie-info img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-info-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-info-details p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.movie-info-details p strong {
+    font-weight: bold;
+    color: #000000;
+}
+
+.sales {
+    display: flex;
+    align-items: center;
+}
+
+.sales strong {
+    margin-right: 5px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+.crew {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* Close Button Styles */
+.close-button {
+    position: absolute; /* 절대 위치 설정 */
+    top: 10px;
+    right: 10px;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}

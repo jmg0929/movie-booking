@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login_styles.css">
+
+</head>
+
+<body>
+    
+    <header>
+        <h1>MovieIsMyLife </h1>
+        <p>&nbsp;: MIML</p>
+        <div class="header-buttons">
+            <!-- 로그인 버튼 추가 -->
+            <button onclick="location.href='login.html'">로그인</button>
+            <!-- 회원가입 버튼 추가 -->
+            <button onclick="location.href='signup.html'">회원가입</button>
+        </div>
+    </header>
+    <nav>
+        <a href="/movie_page.html">홈</a>
+        <a href="/movie_page.html #current">영화</a>
+    </nav>
+
+
+
+    <div class="container">
+        <h2>로그인</h2>
+        <form action="login.php" method="post">
+            <input type="text" name="username" placeholder="ID를 입력하세요" required>
+            <br>
+            <input type="password" name="password" placeholder="비밀번호를 입력하세요" required><br>
+            <input type="submit" value="로그인">
+        </form>
+        <div class="signup">
+            <p>MIML 회원이 아니신가요? &nbsp;&nbsp;<a href="signup.html">회원가입</a></p>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>이용약관 | 개인정보 처리방침</p>
+        <p>대표이사 : 전무건 · 사업자 등록 번호 : 011-2412-5354 · 본사 : 서울시 흑석로 84 중앙대학교 310관 508호</p>
+        <p>고객센터: 010-3673-1181</p>
+        <p>© MovieIsMyLife</p>
+    </footer>
+
+</body>
+
+</html>

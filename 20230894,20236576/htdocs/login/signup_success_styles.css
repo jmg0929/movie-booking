@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
+
+/* Global Styles */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background: #ffffff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1, header p {
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+header p {
+    margin-top: 25px;
+}
+
+/* Header Buttons Styles */
+.header-buttons {
+    display: flex;
+    gap: 1em;
+    margin-left: auto;
+}
+
+.header-buttons button {
+    background-color: #ED3124;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.header-buttons button:hover {
+    background-color: #b00000;
+}
+
+/* Navigation Styles */
+nav {
+    background: #ffffff;
+    padding: 1em 0;
+    text-align: center;
+    border-top: 0.9px solid #0000005c;
+    border-bottom: 1.6px solid #00000093;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+/* Container Styles */
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* Text Styles */
+h1 {
+    color: #333;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ED3124;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b00000;
+}
+
+/* Footer Styles */
+footer {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    font-size: 80%;
+}

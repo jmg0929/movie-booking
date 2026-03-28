@@ -1,0 +1,115 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background: #ffffff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1, header p {
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+header p {
+    margin-top: 25px;
+}
+
+/* Header Buttons Styles */
+.header-buttons {
+    display: flex;
+    gap: 1em;
+    margin-left: auto;
+}
+
+.header-buttons button {
+    background-color: #ED3124;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.header-buttons button:hover {
+    background-color: #b00000;
+}
+
+/* Navigation Styles */
+nav {
+    background: #ffffff;
+    padding: 1em 0;
+    text-align: center;
+    border-top: 0.9px solid #0000005c;
+    border-bottom: 1.6px solid #00000093;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    margin: 0 1em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Form Container Styles */
+form {
+    background-color: white;
+    width: 300px;
+    margin: 65px auto 100px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin: 1em 0;
+}
+
+form label {
+    display: block;
+    margin-top: 1em;
+}
+
+form select, form button {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e03e00;
+}
+
+/* Footer Styles */
+footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    font-size: 80%;
+}

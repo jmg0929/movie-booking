@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="signup_styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            // 페이지가 로드될 때 회원가입 버튼을 비활성화 상태로 설정
+            $('#signup_button').prop('disabled', true);
+            $('#signup_button').addClass('disabled');
+    
+            // 체크박스 변경 시 이벤트 처리
+            $('#agree_checkbox').change(function(){
+                toggleSignupButton();
+            });
+    
+            $('#signup_button').click(function(){
+                if ($('#username').val() === '') {
+                    alert('아이디 중복 체크를 해주세요.');
+                    return false;
+                }
+            });
+    
+            $('#check_duplicate').click(function(){
+                var username = $('#username').val();
+                
+                // AJAX 요청
+                $.ajax({
+                    type: 'POST',
+                    url: 'check_duplicate.php',
+                    data: { username: username },
+                    success: function(response){
+                        if(response === "사용할 수 있는 사용자 이름입니다.") {
+                            $('#duplicate_result').html('<span style="color: green;">' + response + '</span>');
+                            toggleSignupButton();
+                        } else {
+                            $('#duplicate_result').html('<span style="color: red;">' + response + '</span>');
+                            $('#signup_button').prop('disabled', true);
+                            $('#signup_button').addClass('disabled');
+                        }
+                    }
+                });
+            });
+    
+            function toggleSignupButton() {
+                if ($('#agree_checkbox').is(':checked') && $('#duplicate_result span').text() === "사용할 수 있는 사용자 이름입니다.") {
+                    $('#signup_button').prop('disabled', false);
+                    $('#signup_button').removeClass('disabled');
+                } else {
+                    $('#signup_button').prop('disabled', true);
+                    $('#signup_button').addClass('disabled');
+                }
+            }
+        });
+        </script>
+    
+
+</head>
+
+<body>
+
+    <header>
+        <h1>MovieIsMyLife </h1>
+        <p>&nbsp;: MIML</p>
+        <div class="header-buttons">
+            <!-- 로그인 버튼 추가 -->
+            <button onclick="location.href='login.html'">로그인</button>
+            <!-- 회원가입 버튼 추가 -->
+            <button onclick="location.href='signup.html'">회원가입</button>
+        </div>
+    </header>
+    <nav>
+        <a href="/movie_page.html">홈</a>
+        <a href="/movie_page.html #current">영화</a>
+    </nav>
+
+    
+    <div class="container">
+        <h2>회원 가입</h2>
+        <form action="signup.php" method="post">
+
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="ID를 입력하세요" required>
+                <button type="button" id="check_duplicate">ID중복 확인</button>
+            </div>
+
+            <div id="duplicate_result"></div>
+            
+            <input type="password" name="password" placeholder="비밀번호를 입력하세요" required><br>
+            <input type="text" name="name" placeholder="이름을 입력하세요" required><br>
+            <input type="email" name="email" placeholder="Email을 입력하세요" required><br>
+            
+            <br>
+            <label for="agree_checkbox">
+                <input type="checkbox" id="agree_checkbox"> <a href="privacy.html" target="_blank">개인정보 수집 방침</a>에 동의합니다.
+            </label>
+            <p></p>
+
+            <input type="submit" id="signup_button" value="회원가입" disabled>
+        </form>
+        <p>이미 계정이 존재하나요? &nbsp;&nbsp;<a href="login.html">로그인</a></p>
+    </div>
+
+    <footer>
+        <p>이용약관 | 개인정보 처리방침</p>
+        <p>대표이사 : 전무건 · 사업자 등록 번호 : 011-2412-5354 · 본사 : 서울시 흑석로 84 중앙대학교 310관 508호</p>
+        <p>고객센터: 010-3673-1181</p>
+        <p>© MovieIsMyLife</p>
+    </footer>
+    
+</body>
+</html>

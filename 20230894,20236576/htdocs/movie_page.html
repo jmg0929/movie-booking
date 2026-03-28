@@ -1,0 +1,125 @@
+<!--로그인/회원가입이 가능한 메인 페이지-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 예매 페이지</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+    <style>
+        body, button, input, select, textarea {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="end.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>MovieIsMyLife </h1>
+        <p>&nbsp;: MIML</p>
+        <div class="header-buttons">
+            <button onclick="location.href='login/login.html'">로그인</button>
+            <button onclick="location.href='login/signup.html'">회원가입</button>
+        </div>
+    </header>
+    <nav>
+        <a href="movie_page.html">홈</a>
+        <a href="#current">영화</a>
+    </nav>
+
+
+    
+    
+    <div class="main-banner">
+        <div class="image-container">
+        </div>
+        <div class="text-container">
+            <h2>파묘 : 무덤에서 일어나는 두 번째 이야기</h2>
+            <p>6월 1일,</p>
+            <p>한여름의 더위를 날려버릴 무덤에서의 이야기가 시작됩니다!</p>
+        </div>
+    </div>
+    
+    
+    <div class="movies">
+        <div id="current"><h2>현재 상영 중인 영화</h2></div>
+        <div class="movie-list">
+            <div class="movie-card">
+                <div class="poster-container">
+                    <img src="img/영화_신세계_포스터.jpg" alt="영화 포스터">
+                    <div class="overlay">
+                        <a href="movieinfo/movieinfo.php?movie_id=1" class="btn details-btn">상세보기</a>
+                        <a href="book/check_user.php?movie_id=1" class="btn reserve-btn">예매하기</a>
+                    </div>
+                </div>
+                <div class="movie-info">
+                    <p>신세계</p>
+                </div>
+            </div>      
+            <div class="movie-card">
+                <div class="poster-container">
+                    <img src="img/파묘.jpg" alt="영화 포스터">
+                    <div class="overlay">
+                        <a href="movieinfo/movieinfo.php?movie_id=2" class="btn details-btn">상세보기</a>
+                        <a href="book/check_user.php?movie_id=2" class="btn reserve-btn">예매하기</a>
+                    </div>
+                </div>
+                <div class="movie-info">
+                    <p>파묘</p>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="poster-container">
+                    <img src="img/인사이드아웃.webp" alt="영화 포스터">
+                    <div class="overlay">
+                        <a href="movieinfo/movieinfo.php?movie_id=3" class="btn details-btn">상세보기</a>
+                        <a href="book/check_user.php?movie_id=3" class="btn reserve-btn">예매하기</a>
+                    </div>
+                </div>
+                <div class="movie-info">
+                    <p>인사이드 아웃 2</p>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="poster-container">
+                    <img src="img/서울의봄.jpg" alt="영화 포스터">
+                    <div class="overlay">
+                        <a href="movieinfo/movieinfo.php?movie_id=4" class="btn details-btn">상세보기</a>
+                        <a href="book/check_user.php?movie_id=4" class="btn reserve-btn">예매하기</a>
+                    </div>
+                </div>
+                <div class="movie-info">
+                    <p>서울의 봄</p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <div class="poster-container">
+                    <img src="img/범죄도시4.jpg" alt="영화 포스터">
+                    <div class="overlay">
+                        <a href="movieinfo/movieinfo.php?movie_id=5" class= "btn details-btn">상세보기</a>
+                        <a href="book/check_user.php?movie_id=5" class="btn reserve-btn">예매하기</a>
+                    </div>
+                </div>
+                <div class="movie-info">
+                    <p>범죄도시 4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>이용약관 | 개인정보 처리방침</p>
+        <p>대표이사 : 전무건 · 사업자 등록 번호 : 011-2412-5354 · 본사 : 서울시 흑석로 84 중앙대학교 310관 508호</p>
+        <p>고객센터: 010-3673-1181</p>
+        <p>© MovieIsMyLife</p>
+    </footer>
+
+</body>
+</html>

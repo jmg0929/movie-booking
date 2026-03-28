@@ -1,0 +1,162 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #ffffff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1, header p {
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+header p {
+    margin-top: 25px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1em;
+    margin-left: auto;
+}
+
+.header-buttons button {
+    background-color: #ED3124;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.header-buttons button:hover {
+    background-color: #b00000;
+}
+
+/* Navigation Styles */
+nav {
+    background: #ffffff;
+    padding: 1em 0;
+    text-align: center;
+    border-top: 0.9px solid #0000005c;
+    border-bottom: 1.6px solid #00000093;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Form Styles */
+form {
+    background-color: white;
+    width: 600px;
+    margin: 65px auto 100px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form select, form button, form p {
+    margin-bottom: 10px;
+    font-size: 90%;
+}
+
+form select, form button {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e03e00;
+}
+
+/* Seats Styles */
+.seat {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.available {
+    background-color: #ff4400;
+}
+
+.reserved {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.selected {
+    background-color: rgba(0, 0, 255, 0.855);
+    color: white;
+}
+
+.seats {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0.5em;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+/* Screen Styles */
+.screen {
+    width: 100%;
+    height: 40px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    font-size: 80%;
+}
+
+/* Section Title Styles */
+h2 {
+    text-align: center;
+    margin: 1em 0 50px 0;
+}
