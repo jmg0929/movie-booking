@@ -13,6 +13,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
+// [핵심] DB에서 꺼내오는 모든 데이터를 UTF-8로 강제 고정합니다!
+$conn->set_charset("utf8mb4"); 
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 $movie_id = isset($_GET['movie_id']) ? intval($_GET['movie_id']) : 0;
 
 // 쿼리를 통해 영화 정보 가져오기 
