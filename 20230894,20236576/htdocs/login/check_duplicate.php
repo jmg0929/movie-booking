@@ -2,7 +2,7 @@
 // 데이터베이스 연결 설정
 $db_host = "localhost";
 $db_user = "root";
-$db_password = "0000";
+$db_password = "jskkmr0302";
 $db_name = "mydb";
 
 // POST로 받은 사용자 이름

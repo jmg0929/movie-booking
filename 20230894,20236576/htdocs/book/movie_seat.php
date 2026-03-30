@@ -2,7 +2,7 @@
 // 데이터베이스 연결
 $servername = "localhost";
 $db_username = "root";
-$db_password = "0000";
+$db_password = "jskkmr0302";
 $dbname = "mydb";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);

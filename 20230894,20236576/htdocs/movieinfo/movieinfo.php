@@ -2,7 +2,7 @@
 // 데이터베이스 연결 설정
 $servername = "localhost";
 $db_username = "root"; // 데이터베이스 사용자 이름
-$db_password = "0000"; // 데이터베이스 비밀번호
+$db_password = "jskkmr0302"; // 데이터베이스 비밀번호
 $dbname = "myDB"; // 데이터베이스 이름
 
 // 데이터베이스 연결
