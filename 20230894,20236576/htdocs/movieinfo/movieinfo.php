@@ -3,7 +3,7 @@
 $servername = "localhost";
 $db_username = "root"; // 데이터베이스 사용자 이름
 $db_password = "jskkmr0302"; // 데이터베이스 비밀번호
-$dbname = "myDB"; // 데이터베이스 이름
+$dbname = "mydb"; // 데이터베이스 이름
 
 // 데이터베이스 연결
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
